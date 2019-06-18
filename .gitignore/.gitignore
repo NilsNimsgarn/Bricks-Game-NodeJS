@@ -1,0 +1,40 @@
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+var stdin_input = "";
+
+process.stdin.on("data", function (input) {
+    stdin_input += input;                               // Reading input from STDIN
+});
+
+process.stdin.on("end", function () {
+   main(stdin_input);
+});
+
+function main(input) 
+{
+var anzahl=Number(input);
+var x=0;
+var person="";
+
+while (anzahl > x) 
+{
+    x=x+1
+    if(anzahl>0)
+    {
+        anzahl=anzahl-x;
+        person="Patlu";
+    }
+    else if(anzahl===0)
+    {
+    break;
+    }
+     if(anzahl>0)
+    {
+        anzahl=anzahl-x*2;
+        person="Motu";
+    }
+    else if(anzahl===0)
+    {
+    break;
+    }
+}
